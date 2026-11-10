@@ -1,4 +1,4 @@
-/* Deterministic browser teaching model. It never executes C# or SQL. */
+/* Deterministic simulated database model for the teaching activities. */
 (() => {
   'use strict';
   const clone = x => JSON.parse(JSON.stringify(x));
@@ -9,7 +9,7 @@
     const id = positiveInt(input.id), instructorId = positiveInt(input.instructorId), fee = money(input.fee), name = String(input.name).trim();
     if (id === null || instructorId === null || fee === null || !name || name.length > 100) return fail('validation', 'Invalid draft values. No connection was opened and no SQL was sent.');
     const existing = s.courses.find(c => c.id === id);
-    if (existing) return { ...fail('sql-error', `Course ${id} already exists in this browser dataset. A second INSERT with the same primary key is rejected. Choose another CourseId, or select “Reset browser dataset” to repeat the first insert.`, 2627), existing: clone(existing) };
+    if (existing) return { ...fail('sql-error', `Course ${id} already exists in this simulated database. A second INSERT with the same primary key is rejected. Choose another CourseId, or select “Reset simulated database” to repeat the first insert.`, 2627), existing: clone(existing) };
     if (!s.instructors.some(i => i.id === instructorId)) return fail('sql-error', 'InstructorId is not present in Instructors. The foreign key rejects the insert.', 547);
     const row = { ...clone(s.draft), id, name, instructorId, fee }; s.courses.push(row);
     return { kind: 'success', affected: 1, message: 'Rows inserted: 1. The new course is inactive.', row: clone(row) };
