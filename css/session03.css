@@ -1,0 +1,64 @@
+/* Session 03 additions to the supplied final Session 02 identity. */
+body {font-family:'Segoe UI',Arial,sans-serif;font-weight:400}
+.lesson :is(p,li,label,td,dd) {text-align:left;letter-spacing:normal;line-height:1.75}
+.lesson h2,.lesson h3 {letter-spacing:-.025em}
+.lesson h4 {margin:20px 0 9px;font-size:1rem}
+.s2-card>p {margin-bottom:15px}
+.s2-card>h3 {margin-top:20px}
+.s2-card>h3:first-child {margin-top:0}
+.s2-note {display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;align-items:center}
+.s2-note__mascot {grid-column:1;position:static;width:64px;max-width:64px;height:auto;display:block;align-self:start}
+.s2-note__content {grid-column:2;min-width:0}
+.s2-note .s2-note__content strong {display:inline;margin:0}
+.s2-note .s2-note__content>strong {display:block;margin-bottom:6px}
+.s2-note .s2-note__content p {margin:0;font-family:inherit}
+.s2-checklist label {display:flex;gap:11px;align-items:flex-start}
+.s2-checklist input {flex:0 0 auto;margin-top:.45em}
+.s2-checklist label>span {min-width:0;flex:1}
+.proof {background:var(--surface);border-color:var(--border);border-inline-start-color:var(--blue);margin:20px 0}
+.scope-strip {display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 24px}
+.scope-strip span {background:var(--soft);border:1px solid var(--border);border-radius:20px;padding:6px 12px;font-size:.82rem}
+.schema-five {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:20px 0}
+.schema-five .entity {min-width:0;transition:border-color .2s,background .2s}
+.schema-five .entity.active {background:var(--soft-teal)}
+.entity .relation-note {font-size:.78rem;line-height:1.6;color:var(--muted);margin:10px 0 0}
+.s3-fields {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:18px 0}
+.s3-fields label {display:grid;gap:6px;font-size:.86rem;font-weight:600}
+.s3-fields input,.s3-fields select {width:100%;min-width:0;max-width:100%;border:1px solid var(--border);background:var(--surface);color:var(--text);padding:10px;border-radius:7px;font:inherit}
+.s3-fields .wide {grid-column:span 2}
+.sim-toolbar {display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.sim-toolbar label {font-size:.88rem}
+.stage-strip {display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+.stage-strip button[aria-pressed=true] {background:var(--soft-teal);border-color:var(--teal)}
+.stage-detail {min-height:90px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px}
+.record-grid {display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
+.record-card {padding:18px;border:1px solid var(--border);border-radius:10px;background:var(--surface);min-width:0}
+.record-card h4 {margin-top:0}
+.record-card.changed {border-color:var(--teal);background:var(--soft-teal)}
+.record-card dl {margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:7px 12px;font-size:.85rem}
+.record-card dd {margin:0;overflow-wrap:anywhere}
+.record-card dt {color:var(--muted)}
+.result-count {font-weight:700;color:var(--blue);margin:14px 0}
+.empty-table {text-align:center;color:var(--muted);padding:20px}
+.teaching-callout {border:1px dashed var(--border);padding:15px 18px;border-radius:10px;margin:18px 0;background:var(--soft)}
+.code-head {flex-wrap:wrap}
+.code-head span {min-width:0;overflow-wrap:anywhere}
+.code-shell pre {max-width:100%}
+.s2-table td {vertical-align:top}
+.explanation dd p {margin:0}
+.s3-review {display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.s3-review .s2-card {margin:0}
+.s3-review li {margin-bottom:9px}
+.milestone {border-top:4px solid var(--teal)}
+.download-card {display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.download-card p {margin-bottom:0}
+.sim-box {scroll-margin-top:90px}
+.panel-head h1 {max-width:850px}
+.lesson ol:not(.s2-checklist)>li {margin-bottom:10px}
+.sim-box output {display:block}
+.footer-note {font-size:.8rem;color:var(--muted)}
+@media(min-width:1161px){.hero.hero-intro{aspect-ratio:2047/639}.hero.hero-intro h1{font-size:clamp(1.8rem,2.7vw,2.8rem)}.hero.hero-intro .hero-main{max-width:51%;width:51%;flex-basis:51%}.hero .eyebrow{font-size:.62rem}}
+@media(max-width:850px){.schema-five{grid-template-columns:repeat(2,minmax(0,1fr))}.s3-fields{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.s2-note{grid-template-columns:44px minmax(0,1fr);gap:12px;padding:16px}.s2-note__mascot{width:44px;max-width:44px}.schema-five,.record-grid,.s3-review{grid-template-columns:1fr}.s3-fields{grid-template-columns:1fr}.s3-fields .wide{grid-column:auto}.s2-card,.sim-box{padding:18px}.lesson{min-width:0}.explanation{grid-template-columns:minmax(100px,.7fr) minmax(0,1.5fr)}.explanation dt,.explanation dd{padding:10px;font-size:.83rem}.hero.hero-intro h1{font-size:2.15rem!important}.hero.hero-intro{min-height:350px!important}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+@media print{.lesson{display:block!important;break-before:page}.lesson:first-child{break-before:auto}.sim-box,.s2-note__mascot{display:none}.s2-note{display:block}.s3-review{display:block}.s3-review .s2-card{margin:16px 0}.code-shell{break-inside:auto}.code-shell pre{white-space:pre-wrap}.hero{display:none!important}}
